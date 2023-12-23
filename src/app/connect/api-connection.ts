@@ -1,6 +1,6 @@
 export class ApiConnection {
-    public static get DefaultPort(): string { return "55539"; }
-    public static get Protocol(): string { return "https"; }
+    public static get DefaultPort(): string { return "8039"; }
+    public static get Protocol(): string { return "http"; }
 
     public accessToken: string;
     public displayName: string;

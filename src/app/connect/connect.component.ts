@@ -18,7 +18,7 @@ import { ApiConnection } from './api-connection';
             <fieldset *ngIf="_connectionType == 'advanced'">
                 <label class="inline-block">Server Url</label>
                 <tooltip>
-                        The URL of the server to connect to. The default port for the Microsoft IIS Administration API is 55539.
+                        The URL of the server to connect to. The default port for the Microsoft IIS Administration API (Docker) is HTTP 8039.
                 </tooltip>
                 <input type="text" placeholder="ex. contoso.com" class="form-control" #urlField [ngModel]="_conn.url" (ngModelChange)="setUrl($event)" required throttle/>
             </fieldset>
@@ -35,7 +35,7 @@ import { ApiConnection } from './api-connection';
                     class="form-control"
                     [ngModel]="''"
                     (ngModelChange)="setAccessToken($event)"
-                    [attr.placeholder]="!_conn.accessToken ? null : '******************************'" 
+                    [attr.placeholder]="!_conn.accessToken ? null : '******************************'"
                     [attr.required]="!_conn.accessToken || null"/>
             </fieldset>
             <p class="tokenLink">Don't have an access token? <a [attr.disabled]="!tokenLink() ? true : null" (click)="gotoAccessToken($event)" [attr.href]="tokenLink()">Get access token</a></p>
@@ -95,7 +95,7 @@ import { ApiConnection } from './api-connection';
         .in-progress {
             text-align: center;
         }
-        
+
         .in-progress > p {
             margin-top: 40px;
             margin-bottom: 40px;
@@ -130,7 +130,7 @@ import { ApiConnection } from './api-connection';
             padding-left: 8px;
             padding-right: 8px;
         }
-        
+
         .advanced i,
         .simple i {
             margin-left: 5px;
