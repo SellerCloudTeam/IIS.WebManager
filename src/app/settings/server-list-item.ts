@@ -41,7 +41,7 @@ import { NotificationService } from '../notification/notification.service';
                     <fieldset>
                         <label class="inline-block">Server Url</label>
                         <tooltip>
-                                The URL of the server to connect to. The default port for the Microsoft IIS Administration API is 55539.
+                                The URL of the server to connect to. The default port for the Microsoft IIS Administration API (Docker) is HTTP 8039.
                         </tooltip>
                         <input type="text" placeholder="ex. contoso.com" class="form-control block" #urlField [ngModel]="model.url" (ngModelChange)="setUrl($event)" required throttle/>
                     </fieldset>
@@ -54,7 +54,7 @@ import { NotificationService } from '../notification/notification.service';
                             class="form-control block"
                             [ngModel]="''"
                             (ngModelChange)="setAccessToken($event)"
-                            [attr.placeholder]="!model.accessToken ? null : '******************************'" 
+                            [attr.placeholder]="!model.accessToken ? null : '******************************'"
                             [attr.required]="!model.accessToken || null"/>
                         <a class="right" [attr.disabled]="!tokenLink() ? true : null" (click)="gotoAccessToken($event)" [attr.href]="tokenLink()">Get access token</a>
                     </fieldset>
@@ -101,7 +101,7 @@ import { NotificationService } from '../notification/notification.service';
             min-width: 125px;
             width: 100%;
         }
-        
+
         .name {
             padding: 0 15px;
         }
@@ -111,7 +111,7 @@ import { NotificationService } from '../notification/notification.service';
         }
 
         a.active {
-            font-weight: bold;            
+            font-weight: bold;
         }
     `]
 })

@@ -29,10 +29,10 @@ param(
     $iisAdminOwners = "IIS Administration API Owners",
 
 ## TODO: Figure out how to detect endpoint dynamically when the service is installed, blockers:
-## 1. For some reasons port 55539 is owned by system process
+## 1. For some reasons port 8039 is owned by system process
 ## 2. We might be able to detect port used by inspecting services or cert installed
     [string]
-    $apiHost = "https://localhost:55539"
+    $apiHost = "http://localhost:8039"
 )
 
 $ErrorActionPreference = "Stop"
