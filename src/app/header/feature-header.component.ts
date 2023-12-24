@@ -11,7 +11,7 @@ export interface Heading {
     template: `
 <div class="feature-title sme-focus-zone">
     <h1>
-        <i [class]="heading.ico"><span class="border-active">{{heading.name}}</span></i>
+        <i [class]="heading?.ico"><span class="border-active">{{heading?.name}}</span></i>
     </h1>
 </div>
     `,
