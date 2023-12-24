@@ -15,7 +15,8 @@ export class HttpImpl implements HttpFacade {
         (<any>_http)._backend._browserXHR.build = () => {
             let _xhr = _build();
 
-            _xhr.withCredentials = true;
+            // NOTE: withCredentials is incompatible with use of wildcard (any CORS origin)
+            // _xhr.withCredentials = true;
 
             return _xhr;
         };
