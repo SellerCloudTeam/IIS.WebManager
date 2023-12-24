@@ -34,7 +34,7 @@ export class SiteRuntime implements Runtime {
 
     public ConnectToIISHost(): Observable<ApiConnection> {
         return Observable.create(observer => {
-            this.connectService.gotoConnect(false).then(_ => {
+            this.connectService.gotoConnect(true).then(_ => {
                 observer.complete();
             });
         });
